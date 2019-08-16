@@ -25,3 +25,9 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.slideDancer {
+  height: 5%;
+  width: 5%;
+  border: 0;
+  position:absolute;
+}
