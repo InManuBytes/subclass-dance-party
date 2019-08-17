@@ -2,7 +2,9 @@ var makeSlideDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
-  this.$node.css("border", "10px solid blue");
+  this.$node.addClass('slideDancer');
+  this.$node.prepend('<div class="eye-left"></div>');
+  this.$node.prepend('<div class="eye-right"></div>');
 };
 
 makeSlideDancer.prototype = Object.create(makeDancer.prototype);

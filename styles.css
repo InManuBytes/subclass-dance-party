@@ -25,3 +25,58 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.slideDancer{
+  position:absolute;
+  width: 87px;
+  height: 71px;
+  border-radius: 55% 55% 45% 45%;
+  background: linear-gradient(to bottom right, #FFAB59, #FF9B67);
+  border: 0;
+  z-index: 2;
+}
+
+.eye-left{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  margin: 35px 35px 15px 15px;
+}
+.eye-right{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  margin: 35px 35px 55px 55px;
+}
+
+.center{
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #AECD66;
+  border-radius: 50%;
+  margin: 4px;
+}
+.pupil{
+  position: absolute;
+  width: 8px;
+  height: 14px;
+  background: #323739;
+  border-radius: 50%;
+  margin: 2px 5px;
+  transform-origin: center center;
+  animation: pupil 3s both ease-in-out infinite;
+}
+
+@keyframes pupil{
+  0%, 25%{
+    transform: rotateX(0deg)
+  }
+  12.5%{
+    transform: rotateX(70deg)
+  }
+}
