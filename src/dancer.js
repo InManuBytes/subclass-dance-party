@@ -25,3 +25,13 @@ makeDancer.prototype.setPosition = function(top, left) {
   };
   this.$node.css(styleSettings);
 };
+
+makeDancer.prototype.lineUp = function() {
+  /* var lineSettings = {
+    left: 0,
+  }
+  this.$node.css(lineSettings); */
+  this.$node.anime({
+    left: 20
+  });
+}

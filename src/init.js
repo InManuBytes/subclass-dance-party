@@ -29,5 +29,16 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
   });
+
+  $('button').on('click', function(event) {
+    window.dancers.forEach(function(dancer) {
+      dancer.lineUp();
+    })
+    //alert('work')
+  })
+
+  $('body').on("mouseover", ".dancer", function() {
+    alert('hey');
+  });
 });
 
