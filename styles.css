@@ -1,5 +1,8 @@
 body, html{
   height:100%;
+  background: url('sea.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 body{
   margin: 0px;
@@ -20,11 +23,43 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+button {
+  border-radius: 8px;
+  color: white;
+  background-color: rgb(2, 54, 50);
+  padding: 5px 10px 8px 10px;
+  font-size: 16px;
+}
+button:hover {
+  background-color: rgb(31, 226, 210);
+}	      
 .dancer{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
 }
+<<<<<<< HEAD
+=======
+.slideDancer {
+  height: 5%;
+  width: 5%;
+  border: 0;
+  position:absolute;
+}
+
+.crabDancer {
+  background: url('crab.png');
+  background-size: 80px 100px;
+  width:20%;
+  height: 20%;
+  border: 0;
+  /* border-radius:0; */
+  position:absolute;
+  background-repeat: no-repeat;
+  animation:spin 4s linear infinite;
+}
+@keyframes spin { 100% { transform:rotate(360deg); } }
+>>>>>>> 592a7514a831726bda0b3391f70f76bee97e1fa2
 
 .slideDancer{
   position:absolute;
@@ -35,7 +70,10 @@ body, a:link, a:visited, a:active{
   border: 0;
   z-index: 2;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 592a7514a831726bda0b3391f70f76bee97e1fa2
 .eye-left{
   position: absolute;
   width: 16px;
@@ -51,6 +89,7 @@ body, a:link, a:visited, a:active{
   background: white;
   border-radius: 50%;
   margin: 35px 35px 55px 55px;
+<<<<<<< HEAD
 }
 
 .center{
@@ -80,3 +119,6 @@ body, a:link, a:visited, a:active{
     transform: rotateX(70deg)
   }
 }
+=======
+}
+>>>>>>> 592a7514a831726bda0b3391f70f76bee97e1fa2
