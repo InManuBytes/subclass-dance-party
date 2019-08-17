@@ -12,18 +12,22 @@ makeBlinkyDancer.prototype.constructor = makeSlideDancer;
 
 makeSlideDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
-  makeDancer.prototype.step.call(this)
+  makeDancer.prototype.step.call(this);
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.fadeIn();
   this.$node.animate({
-    left: [ "+=50", "swing" ]
-  },300,function(){
-    //done
+    left: "+=50"
   }).animate({
-    left: [ "-=50", "swing" ]
-  },300,function(){
-    //done
+    left: "-=50"
   });
+};
+
+makeSlideDancer.prototype.lineUp = function() {
+  var lineSettings = {
+    opacity: 0.25,
+  };
+  this.$node.animate(lineSettings);
+  makeDancer.prototype.lineUp.call(this);
 };
