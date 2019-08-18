@@ -11,7 +11,6 @@ makeCrab.prototype.step = function() {
   this.$node.addClass('dancing');
 };
 makeCrab.prototype.lineUp = function() {
-  //this.$node.addClass('paused');
   makeDancer.prototype.lineUp.call(this);
   this.$node.addClass('floating');
 };

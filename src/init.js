@@ -36,7 +36,6 @@ $(document).ready(function() {
     window.dancers.forEach(function(dancer) {
       dancer.lineUp();
     });
-    //alert('work')
   });
 
   $('body').on('mouseover', '.dancer', function() {
