@@ -17,17 +17,15 @@ makeSlideDancer.prototype.step = function() {
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.fadeIn();
-  this.$node.animate({
-    left: "+=50"
-  }).animate({
-    left: "-=50"
-  });
+  this.$node.addClass('dancing'); //changed the animation to pure css
 };
 
 makeSlideDancer.prototype.lineUp = function() {
+  this.$node.finish();
+  makeDancer.prototype.lineUp.call(this);
   var lineSettings = {
     opacity: 0.25,
   };
   this.$node.animate(lineSettings);
-  makeDancer.prototype.lineUp.call(this);
+  this.$node.addClass('floating');
 };

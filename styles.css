@@ -33,6 +33,7 @@ button {
 button:hover {
   background-color: rgb(31, 226, 210);
 }
+
 .dancer{
   border:10px solid red;
   border-radius:10px;
@@ -51,12 +52,34 @@ button:hover {
   width:20%;
   height: 20%;
   border: 0;
-  /* border-radius:0; */
   position:absolute;
   background-repeat: no-repeat;
+}
+
+.crabDancer.dancing {
   animation:spin 4s linear infinite;
 }
 @keyframes spin { 100% { transform:rotate(360deg); } }
+
+.crabDancer.floating {
+  animation:float 3s linear infinite;
+}
+
+@keyframes float {
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(40px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+.paused{
+  animation-play-state: paused;
+}
 
 .slideDancer{
   position:absolute;
@@ -82,4 +105,21 @@ button:hover {
   background: white;
   border-radius: 50%;
   margin: 35px 35px 55px 55px;
+}
+.slideDancer.dancing {
+  animation:slide 1s linear infinite;
+}
+@keyframes slide {
+  0%{
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translateX(40px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+.slideDancer.floating {
+  animation:float 4s linear infinite;
 }
