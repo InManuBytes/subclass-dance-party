@@ -71,13 +71,8 @@ $(document).ready(function() {
   };
 
   checkDistance();
-  // repeat function call every timeInMilliseconds
-  // window.setInterval(checkDistance, 10);
-  // var _checkDistanceStep = function () {
-  //   setTimeout(checkDistance,100)
-  // }
 
-  $("body").on("mouseover", ".dancer", function() {
-    //alert("hey");
+  $('body').on('mouseover', '.dancer', function() {
+    $(this).fadeOut();
   });
 });
