@@ -1,6 +1,7 @@
 // Creates and returns a new dancer object that can step
 var makeDancer = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
+  // added as properties so we can calculate distances
   this.top = top;
   this.left = left;
   // use jQuery to create an HTML <span> tag
@@ -32,5 +33,6 @@ makeDancer.prototype.lineUp = function() {
   var lineSettings = {
     left: '0px'
   };
+  this.left = 0;
   this.$node.animate(lineSettings);
 };
